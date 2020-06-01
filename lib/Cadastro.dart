@@ -53,14 +53,23 @@ class _CadastroState extends State<Cadastro> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.all(10),
+                    child: RaisedButton(
+                      child: Text("Voltar"),
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/home");
+                      },
+                    ),
+                  ),
                  Padding(
                    padding: EdgeInsets.all(10),
                    child: RaisedButton(
-                     child: Text("Entrar"),
+                     child: Text("Cadastrar"),
                      onPressed: () {
                        showDialog(context: context, child: CupertinoAlertDialog(
                          title: Text("Alerta"),
-                         content: Text("Login realizado com sucesso"),
+                         content: Text("Cadastro realizado com sucesso"),
                          actions: <Widget>[
                            CupertinoDialogAction(
                              child: Text("Ok"),
